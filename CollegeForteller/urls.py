@@ -28,4 +28,6 @@ urlpatterns = [
     path('profile', views.userProfile, name='profile'),
     path('mainpage', views.mainPage, name='mainpage'),
     path('userlist', views.getuserslist, name='userlist'),
+     url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]
